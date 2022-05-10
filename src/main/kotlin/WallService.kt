@@ -4,10 +4,8 @@ object WallService {
 
 
     fun add(post: Post): Post {
-        //val (privateProperty) = post
         propertyId++
         val c = post.copy(propertyId = propertyId)
-        //val updatePropertyId = post.copy(propertyId= propertyId)
         posts.put(propertyId, c)
         return c
     }
